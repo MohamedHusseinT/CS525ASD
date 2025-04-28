@@ -1,0 +1,14 @@
+
+| Step | Sender | Receiver | Message |
+|:---|:---|:---|:---|
+| 1 | User | CarRaceUI | start() |
+| 2 | CarRaceUI | CarRaceService | start() |
+| 3 | CarRaceService | Car | start() |
+| 4 | User | CarRaceUI | increaseSpeed() |
+| 5 | CarRaceUI | CarRaceService | increaseSpeed() |
+| 6 | CarRaceService | Car | goFaster() |
+| 7 | CarRaceService | HistoryList | addCommand(IncreaseSpeedCommand) |
+| 8 | HistoryList | IncreaseSpeedCommand | execute() |
+| 9 | User | CarRaceUI | undo() |
+| 10 | CarRaceUI | HistoryList | undo() |
+| 11 | HistoryList | IncreaseSpeedCommand | unexecute() |
